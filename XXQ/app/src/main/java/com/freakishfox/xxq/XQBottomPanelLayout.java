@@ -3,14 +3,16 @@ package com.freakishfox.xxq;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ImageView;
 import android.content.Context;
+import android.widget.RelativeLayout;
 
 /**
  * Created by Administrator on 9/1 0001.
  */
-public class XQBottomPanelLayout extends LinearLayout{
+public class XQBottomPanelLayout extends RelativeLayout{
     public XQBottomPanelLayout(Context context){
         super(context);
 
@@ -18,6 +20,21 @@ public class XQBottomPanelLayout extends LinearLayout{
         bottom_panel_images.put(Constants.BOTTOM_PANEL_ITEM_ID_MESSAGE, new PanelItem(false, R.drawable.skin_tab_icon_conversation_normal, R.drawable.skin_tab_icon_conversation_selected));
         bottom_panel_images.put(Constants.BOTTOM_PANEL_ITEM_ID_CONTACT, new PanelItem(false, R.drawable.skin_tab_icon_contact_normal, R.drawable.skin_tab_icon_contact_selected));
         bottom_panel_images.put(Constants.BOTTOM_PANEL_ITEM_ID_NEWS, new PanelItem(false, R.drawable.skin_tab_icon_plugin_normal, R.drawable.skin_tab_icon_plugin_selected));
+
+        //绑定各个ImageView的点击事件
+        for (Map.Entry<Integer, PanelItem> item : bottom_panel_images.entrySet()){
+            PanelItem singleItem = item.getValue();
+
+            ImageView imageView = singleItem.imageView;
+            if(imageView != null){
+                imageView.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        onPanelItemSelected(v.getId());
+                    }
+                });
+            }
+        }
     }
 
     class PanelItem{
@@ -25,6 +42,8 @@ public class XQBottomPanelLayout extends LinearLayout{
             isSelected = selected;
             normalBkgImage = normalImage;
             selectedBkgImage = selectedImage;
+
+            imageView = new ImageView;
         }
 
         boolean isSelected;             //当前Item是否选中
@@ -37,6 +56,10 @@ public class XQBottomPanelLayout extends LinearLayout{
     //保存底部按钮对象数组
     private Map<Integer, PanelItem> bottom_panel_images = new HashMap<>();
 
+    @Override
+    protected void onFinishInflate(){
+
+    }
     /**
         @method: onPanelItemSelected
         @method description: 处理底部按钮选中UI事件
