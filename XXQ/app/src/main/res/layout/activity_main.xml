@@ -25,14 +25,9 @@
                 android:id="@+id/image_message_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/skin_tab_icon_conversation_normal"/>
 
-            <TextView
-                android:id="@+id/text_message_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/message_list_name"
-                android:layout_gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -45,14 +40,9 @@
                 android:id="@+id/image_contact_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/skin_tab_icon_contact_normal"/>
 
-            <TextView
-                android:id="@+id/text_contact_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contact_list_name"
-                android:layout_gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -65,14 +55,9 @@
                 android:id="@+id/image_news_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:src="@drawable/skin_tab_icon_plugin_normal"/>
 
-            <TextView
-                android:id="@+id/text_news_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/news_list_name"
-                android:layout_gravity="center"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
