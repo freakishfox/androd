@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">XXQ</string>
+    <string name="message_list_name">消息</string>
+    <string name="contact_list_name">联系人</string>
+    <string name="news_list_name">动态</string>
 </resources>
