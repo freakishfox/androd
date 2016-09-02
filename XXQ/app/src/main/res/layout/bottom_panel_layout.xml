@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.freakishfox.xxq.XQBottomPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:orientation="horizontal"
@@ -50,4 +50,4 @@ android:layout_alignParentBottom="true">
             android:src="@drawable/skin_tab_icon_plugin_normal"/>
 
     </LinearLayout>
-</com.freakishfox.xxq.XQBottomPanelLayout>
+</LinearLayout>
