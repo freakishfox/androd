@@ -76,12 +76,8 @@ public class XQBottomPanelLayout extends LinearLayout{
                 imageView.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
-                        onPanelItemSelected(v.getId());
 
-                        //接受到UI点击事件，通知到监听者
-                        if(bottom_panel_delegate != null){
-                            bottom_panel_delegate.onPanelItemClick(v.getId());
-                        }
+                        selectItem(v.getId());
                     }
                 });
             }
@@ -162,5 +158,23 @@ public class XQBottomPanelLayout extends LinearLayout{
 
         bottom_panel_delegate = listener;
         return true;
+    }
+
+    /**
+        @method: selectItem
+        @method description: 选中某一个Item
+
+        @param:  itemIndex 被选中的那个item 的索引位置
+        @return:
+        @create_time: 9/2 0002 13:51
+        @author: freakishfox
+    */
+    public void selectItem(int itemId){
+        onPanelItemSelected(itemId);
+
+        //接受到UI点击事件，通知到监听者
+        if(bottom_panel_delegate != null){
+            bottom_panel_delegate.onPanelItemClick(itemId);
+        }
     }
 }
