@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:background="@color/colorBlue">
 
-    <TextView
+    <WebView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/contact_list_name"/>
+        android:id="@+id/news_web_view"/>
 </LinearLayout>

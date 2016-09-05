@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ListView 每一行的控件布局
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/message_user_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/message_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#FF0000"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/message_last_message"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:textColor="#656565"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+</LinearLayout>
