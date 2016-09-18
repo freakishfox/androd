@@ -1,0 +1,1 @@
+jarsigner -verbose -keystore huskar.jks -signedjar xxq_signed.apk xxq_2.apk huskar -digestalg SHA1 -sigalg MD5withRSA -tsa http://timestamp.digicert.com
