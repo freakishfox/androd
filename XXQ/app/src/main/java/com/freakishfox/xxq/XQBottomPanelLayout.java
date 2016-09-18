@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.ImageView;
 import android.content.Context;
 
+import com.freakishfox.xxq.NativeUtil.NativeUtil;
+
 /**
  * Created by Administrator on 9/1 0001.
  */
@@ -94,6 +96,10 @@ public class XQBottomPanelLayout extends LinearLayout{
         @author: freakishfox
     */
     private void onPanelItemSelected(int itemId){
+
+        NativeUtil nativeUtil = new NativeUtil();
+        int rs = nativeUtil.add(1, 2);
+        Log.d(Constants.TAG_BOTTOM_PANEL, "nativeAdd-->" + rs);
 
         //先把三个按钮全都设置成非选中状态，然后设置点击的那个为选中状态
         setItemState(Constants.BOTTOM_PANEL_ITEM_ID_MESSAGE, false);
